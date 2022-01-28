@@ -1,0 +1,62 @@
+package menustack;
+
+public class LL {
+	Node head;
+	public LL() {
+		head =null;
+	}
+
+	public void push(int data) {
+		Node temp=new Node();
+		temp.setData(data);
+
+		if(head == null) {
+			head =temp;
+		}
+		else {
+			temp.setNext(head);
+			head =temp;
+		}
+
+	}
+	public int pop() {
+		int d=0;
+		if(head == null) {
+			System.out.println("Stack empty");
+			return 0;//stack empty return from here
+		}
+		
+		else {
+			 d =head.getData();
+			Node temp =head;
+			head =temp.getNext();
+			temp.setNext(null);
+		}
+		
+		return d;
+	}
+
+	
+
+
+	public String toString() {
+		String str ="";
+		Node it =head;
+		while(it != null) {
+			str+=it+"-->";
+			it= it.getNext();
+		}
+		return str;
+	}
+
+	public void peep() {
+		if(head == null) {
+			System.out.println("EMPTY STACK !! NOTHING TO PEEP");
+			return;
+		}
+		System.out.println(head.getData()+"is at top");
+		
+	}
+
+
+}

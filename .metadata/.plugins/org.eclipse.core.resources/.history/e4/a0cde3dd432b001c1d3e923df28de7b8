@@ -1,0 +1,21 @@
+package Practice;
+
+public class Mian {
+
+	public static void main(String[] args) {
+		LL l1=new LL();
+		l1.insertFront(1);
+		l1.insertFront(2);
+		l1.insertFront(3);
+		l1.insertFront(4);
+//		System.out.println(l1);
+//		l1.insertBack(10);
+//		l1.insertBack(20);
+		l1.insertBack(5);
+		l1.insertBack(6);
+		System.out.println(l1);
+		l1.delOddNode();
+		System.out.println(l1);
+	}
+
+}

@@ -1,0 +1,37 @@
+package bookinfo;
+
+public class LL {
+	Node head;
+	public LL() {
+		head =null;
+	}
+
+	public String toString() {
+		String str ="";
+		Node it =head;
+		while(it != null) {
+			str+=it+"\n";
+			it= it.getNext();
+		}
+		return str;
+	}
+
+	public void insert(Book b1) {
+		Node tmp =new Node();
+		tmp.setData(b1);
+		if(head ==null) {
+			//lsit is empty
+			head =tmp;
+		}
+		
+		else {
+			//list is not empty
+			Node it =head;//it to find end
+			while(it.getNext() != null) {
+				it=it.getNext();
+			}
+			it.setNext(tmp);
+		}
+		
+	}
+}

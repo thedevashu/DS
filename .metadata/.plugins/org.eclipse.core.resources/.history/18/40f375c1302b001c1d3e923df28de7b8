@@ -1,0 +1,16 @@
+package hashtable;
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("Size of array");
+		StringTable st =new StringTable(4);
+		st.insert("aAAa");
+		st.insert("oBwe");
+		st.insert("bOvfOb");
+		st.insert("BOacob");
+		
+		st.search("aAAa");
+	}	
+
+}

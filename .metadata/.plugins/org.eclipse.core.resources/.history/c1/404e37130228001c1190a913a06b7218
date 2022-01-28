@@ -1,0 +1,18 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkList ll =new LinkList();
+		ll.insert(2);
+		ll.insert(1);
+		ll.insert(12);
+		ll.insert(12);
+		ll.insert(12);
+		ll.deletFirst();
+		//String s= ll.toString();
+		System.out.println(ll);
+		
+	}
+
+}

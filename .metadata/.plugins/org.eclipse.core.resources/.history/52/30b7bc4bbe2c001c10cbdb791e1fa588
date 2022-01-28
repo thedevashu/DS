@@ -1,0 +1,18 @@
+package bookinfo;
+
+public class LL {
+	Node head;
+	public LL() {
+		head =null;
+	}
+
+	public String toString() {
+		String str ="";
+		Node it =head;
+		while(it != null) {
+			str+=it+"-->";
+			it= it.getNext();
+		}
+		return str;
+	}
+}

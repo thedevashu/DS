@@ -1,0 +1,25 @@
+package binarytree;
+
+public class BinaryTree {
+	Node root;
+	
+	public BinaryTree(){
+		root =null;
+	}
+	public void insert(int data) {
+		Node temp =new Node();
+		temp.setData(data);
+		Node it= root;
+		//if root is null
+		if(root == null) {
+			root = temp;
+		}
+		//root is not null
+				//it node for itration
+		else if(it.getData()>temp.getData()) {
+			//input data is smaller 
+			
+			
+		}
+	}
+}

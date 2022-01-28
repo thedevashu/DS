@@ -1,0 +1,11 @@
+package studenthash;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Student s =new Student();
+		s.setMob_no(1234567879);
+
+	}
+
+}

@@ -1,0 +1,45 @@
+package Practice;
+
+public class LL {
+	Node head;
+
+	public LL(){
+		head =null;
+	}
+	
+	public void insertFront(int data) {
+		Node temp =new Node(data);
+		
+		if(head ==null) {
+			head =temp;
+		}
+		else {
+			temp.setNext(head);
+			head =temp;
+		}
+	}
+	
+	public void insertBack(int data) {
+		Node temp =new Node(data);
+		if(head==null) {
+		head =temp;
+		}
+		else {
+			Node it=new Node();
+		while(temp != null) {
+			temp = temp.getNext();
+		}
+		}
+		temp.setNext(temp);
+	}
+	
+	public String toString() {
+		String str="";
+		Node it =head;
+		while(it!=null){
+			str+=it+" ";
+			it=it.getNext();
+		}
+		return str;
+	}
+}

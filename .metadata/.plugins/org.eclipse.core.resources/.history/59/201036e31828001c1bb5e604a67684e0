@@ -1,0 +1,112 @@
+import Practice.Node;
+
+public class LinkList {
+	Node head;
+	public LinkList(){
+		head =null;
+
+	}
+	public void append(int data) {
+		Node temp =new Node(data);
+		if(head==null) {
+			head =temp;
+		}
+		else {
+			Node it=new Node();
+			it=head;
+			while(it.getNext() != null) {
+				it = it.getNext();
+			}
+			it.setNext(temp);
+		}
+	}
+	public void insert(int data) {
+		Node temp =new Node(data);
+		if(head ==null) {
+			//no element
+			head =temp;
+		}
+		else {
+			if(head.getNext() ==null) {
+				temp.setNext(head);
+				head=temp;
+			}
+			else {
+				temp.setNext(head);
+				head =temp;
+			}
+		}
+	}
+
+
+	public void delAtPos(int pos) {
+		int n =numOfNode();
+		Node it =head;
+		if(pos == 1) {
+			deletFirst();
+		}
+		else if(pos == n+1) {
+			deletLast();
+		}
+		else if(pos>1 && pos <n) {
+			for(int i =1;i<pos-1;i++) {
+				it =it.getNext();
+			}
+			Node temp =it.getNext().getNext();
+			it.setNext(temp);
+			//temp.setNext(null);
+			
+			//it = it.getNext();
+//			temp.setNext(null);
+			System.out.println(temp);
+		}
+		
+	}
+
+
+	private int numOfNode() {
+		int num=0;
+		Node it=head;
+
+		while(it.getNext() != null){
+			it =it.getNext();
+			num++;
+		}
+		return num;
+	}
+	public void deletLast() {
+		if(head == null) {
+			System.out.println("List is empty");
+		}
+		else {
+			Node it =head;
+			while(it.getNext().getNext() != null) {
+				it =it.getNext();
+			}
+			Node temp =it;
+			it.setNext(null);
+
+		}
+	}
+
+	public void deletFirst(){
+		Node temp =head;
+		if(head ==null) {
+			System.out.println("List is empty");
+		}
+		else {
+			//temp =head.getNext();
+			head = temp.getNext();
+		}
+	}
+
+	public String toString() {
+		String str="";
+		Node it =head;
+		while(it != null) {
+			str+=" "+ it+ "";
+			it=it.getNext();
+		}
+		return str;
+	}
+}

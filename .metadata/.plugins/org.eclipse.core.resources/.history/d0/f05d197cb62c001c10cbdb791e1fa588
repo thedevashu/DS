@@ -1,0 +1,23 @@
+package studenthash;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Student s1 =new Student();
+		Student s2 =new Student();
+		Student s3 =new Student();
+		Student s4 =new Student();
+		s1.setMob_no(923557833);
+		s2.setMob_no(717557822);
+		s3.setMob_no(927557876);
+		s4.setMob_no(75525784);
+		StudentHash sh =new StudentHash(4);
+		sh.insertStd(s1);
+		sh.insertStd(s2);
+		sh.insertStd(s3);
+		sh.insertStd(s4);
+		System.out.println(sh);
+
+	}
+
+}

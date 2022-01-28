@@ -1,0 +1,12 @@
+package bookinfo;
+
+public class Main {
+
+	public static void main(String[] args) {
+		LL bookList =new LL();
+		Book b1 =new Book(1,"RDPD",123,499);
+		
+		bookList.insert(b1);
+	
+	}
+}

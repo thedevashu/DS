@@ -1,0 +1,60 @@
+package cll;
+
+public class CLinkList {
+	Node head;
+	public CLinkList() {
+		head =null;
+	}
+	
+	public void insert(int data) {
+		Node temp =new Node();
+		temp.setData(data);
+		
+		if(head == null) {
+			head =temp;
+			temp.setNext(head);
+		}
+		else {
+			temp.setNext(head.getNext());
+			head.setNext(temp);
+			
+			int x =head.getData();
+			head.setData(temp.getData());
+			temp.setData(x);
+			
+		}
+	}
+	
+	public String toString() {
+		String str ="";
+		Node it =head;
+		if(head == null) {return "CLL is empty!!";}
+		do {
+			str +=it+"-->";
+			it= it.getNext();
+		}while(it != head);
+		return str;
+	}
+	
+	public void append(int data) {
+		Node temp = new Node();
+		temp.setData(data);
+		if(head == null) {
+			head =temp;
+			temp.setNext(head);
+		}
+		else {
+			Node it =head;
+			while(it.getNext() != head) {
+				it =it.getNext();
+			}
+			it.setNext(temp);
+			temp.setNext(head);
+		}
+	}
+
+	public void delFirst() {
+		                                   
+	}
+
+}

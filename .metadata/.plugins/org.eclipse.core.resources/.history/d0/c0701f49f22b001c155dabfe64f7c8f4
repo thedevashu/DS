@@ -1,0 +1,35 @@
+package circularqueue;
+
+public class Main {
+
+	public static void main(String[] args) {
+		CQueue q1= new CQueue(4);
+		CQueue q2= new CQueue(4);
+		CQueue q3= new CQueue(4);
+		
+		q1.insert(1);
+		q1.insert(2);
+		q1.insert(3);
+		q1.insert(4);
+		q1.insert(3);
+		q1.insert(4);
+		q1.delet();
+		System.out.println(q1);
+		
+//		q2.insert(1);
+//		q2.insert(2);
+//		q2.insert(3);
+//		q2.insert(4);
+//		q2.delet();
+//		System.out.println(q2);
+		
+		q3.sameAs(q1);
+		System.out.println(q3);
+		
+		
+		
+		
+		
+	}
+
+}

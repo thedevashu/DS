@@ -1,0 +1,91 @@
+package binarytree;
+
+public class BinaryTree {
+	Node root;
+
+	public BinaryTree(){
+		root =null;
+	}
+	public void insert(int data) {
+		Node temp =new Node();
+		temp.setData(data);
+		Node it= root;//it node for itration
+
+		//if root is null
+		if(root == null) {
+			root = temp;
+			return;
+		}
+		//root is not null
+		while(true) {	
+			if(it.getData() > temp.getData()) {
+				//input data is smaller so go to left
+				if(it.getLeft() != null) {
+					it =it.getLeft();//if left is null then stop 
+				}
+				else {
+					it.setLeft(temp);//set it left which is null to temp
+					break;
+				}
+			}
+			else if(it.getData()<temp.getData()) {
+				//input is greater so go right
+				if(it.getRight() != null) {
+					it =it.getRight();
+				}
+				else {
+					it.setRight(temp);
+					break;
+				}
+				
+			}
+			else {
+				System.out.println("Duplicate element");
+			}
+		}
+	}
+	public void print() {
+		Node it =root;
+		//inOrder(it);
+		preOrder(it);
+		
+	}
+	private void preOrder(Node it) {
+		if(it != null) {
+			System.out.print(it.getData() + ",");
+			preOrder(it.getLeft());
+			preOrder(it.getRight());
+		}
+		
+	}
+	private void inOrder(Node it) {
+		if(it != null) {
+			inOrder(it.getLeft());
+			System.out.print(it.getData() + ",");
+			inOrder(it.getRight());
+		}
+		
+	}
+	
+	public void search(int val) {
+		Node it =root;
+		while(true) { 
+			if(it == null) {
+				System.out.println("Not Found!!");
+				break;
+			}
+		if(val < it.getData()) {
+			//go left
+			it=it.getLeft();
+		}
+		else if(val >it.getData()) {
+			//go right
+			it=it.getRight();
+		}
+		else {	
+			System.out.println("Found");
+			break;
+			}
+		}
+	}
+}

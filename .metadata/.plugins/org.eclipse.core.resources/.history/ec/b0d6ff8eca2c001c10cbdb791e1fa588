@@ -1,0 +1,31 @@
+package bookinfo;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		BookList bookList =new BookList();
+		Scanner scn =new Scanner(System.in);
+		menu(scn,bookList);
+		
+//		Book b1 =new Book(1,"RDPD",123,499);
+//		Book b2 =new Book(2,"aDPD",23,399);
+//		
+//		bookList.insert(b1);
+//		bookList.insert(b2);
+//		bookList.updateQ("RDPD",-103);
+//		System.out.println(bookList);
+		
+	
+	}
+
+	private static void menu(Scanner scn, BookList bookList) {
+		System.out.println("__________WEL-COME__________");
+		System.out.println("ENTER YOUR CHOICE!!");
+		while(true) {
+			System.out.println("1. Insert\n2.");
+		}
+		
+	}
+}

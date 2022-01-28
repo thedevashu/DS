@@ -1,0 +1,21 @@
+package studenthash;
+
+public class StudentHash {
+
+	Student st[];
+	public StudentHash(int size) {
+		st =new Student[size];
+	}
+	
+	public void insertStd(Student s) {
+		int key =(int) hashCode(s.getMob_no());
+		System.out.println(""+key);
+	}
+
+	private double hashCode(double mob_no) {
+		double key=mob_no %100;
+		key+=123;
+		key=key%st.length;
+		return  key;
+	}
+}

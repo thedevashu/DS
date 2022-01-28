@@ -1,0 +1,12 @@
+package empSLLmenuderivven;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Employee e1= new Employee("a",1,200);
+		EmpList ll = new EmpList();
+		ll.insertEmp(e1);
+		System.out.println(ll);
+	}
+
+}

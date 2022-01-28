@@ -1,0 +1,17 @@
+package bookinfo;
+
+public class Main {
+
+	public static void main(String[] args) {
+		LL bookList =new LL();
+		Book b1 =new Book(1,"RDPD",123,499);
+		Book b2 =new Book(2,"aDPD",23,399);
+		
+		bookList.insert(b1);
+		bookList.insert(b2);
+		bookList.updateQ(b2,46);
+		System.out.println(bookList);
+		
+	
+	}
+}

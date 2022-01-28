@@ -1,0 +1,18 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkList ll =new LinkList();
+		Scanner scn =new Scanner(System.in);
+		boolean b=true;
+		while(b) {
+			System.out.println("Press 1 to Add in front\nPress 2 for Add last");
+			System.out.println("Press 3 to delet in front\nPress 4 for delete last");
+			System.out.println("Press 5 to Add at  front\nPress 2 for Add last");
+		}
+	
+		
+	}
+
+}

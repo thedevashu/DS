@@ -1,0 +1,11 @@
+package hashtable;
+
+public class Main {
+
+	public static void main(String[] args) {
+		StringTable st =new StringTable(4);
+		st.insert("a");
+
+	}
+
+}

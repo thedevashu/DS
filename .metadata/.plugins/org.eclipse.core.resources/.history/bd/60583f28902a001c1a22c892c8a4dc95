@@ -1,0 +1,23 @@
+package cll;
+
+public class CLinkList {
+	Node head;
+	public CLinkList() {
+		head =null;
+	}
+	
+	public void insert(int data) {
+		Node temp =new Node();
+		temp.setData(data);
+		
+		if(head == null) {
+			temp.setNext(head);
+			head =temp;
+		}
+		else {
+			temp.setNext(head);
+			head =temp;
+		}
+	}
+	
+}

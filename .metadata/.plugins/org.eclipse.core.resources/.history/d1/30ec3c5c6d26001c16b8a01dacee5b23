@@ -1,0 +1,28 @@
+package sorting;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int arr[] = {-23,42,21,-54,-78,2,6,2};
+		Sort.SelectionD(arr);
+		printarr(arr);
+		Sort.SelectionA(arr);
+		printarr(arr);
+		Sort.InsertA(arr);
+		printarr(arr);
+		Sort.InsertD(arr);
+		printarr(arr);
+		Sort.bubbleA(arr);
+		System.out.println("bubbleA");
+		printarr(arr);
+		Sort.bubbleD(arr);
+		System.out.println("bubbleD");
+		printarr(arr);
+	}
+	public static void printarr(int arr[]) {
+		for(int i=0;i<arr.length;i++) {
+			System.out.print(arr[i]+",");
+		}
+		System.out.println("<--Array");
+	}
+}

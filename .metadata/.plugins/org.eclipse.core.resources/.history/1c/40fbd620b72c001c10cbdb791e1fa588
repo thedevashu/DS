@@ -1,0 +1,20 @@
+package studenthash;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Student s1 =new Student(12,"as",12345,"asdag.com");
+		Student s2 =new Student(14,"bas",12343,"asdag.com");
+		Student s3 =new Student(145,"atys",123467,"daergd.com");
+		Student s4 =new Student(52,"fras",123478,"gbdsdag.com");
+		
+		StudentHash sh =new StudentHash(4);
+		sh.insertStd(s1);
+		sh.insertStd(s2);
+		sh.insertStd(s3);
+		sh.insertStd(s4);
+		System.out.println(sh);
+
+	}
+
+}

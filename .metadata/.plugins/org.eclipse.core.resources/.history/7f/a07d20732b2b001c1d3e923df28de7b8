@@ -1,0 +1,26 @@
+package hashtable;
+
+public class StringTable {
+	String [] str;
+	
+	public StringTable(int size) {
+		str = new String[size];
+	}
+	
+	public void insert(String strInput) {
+		int key = hashFunction(strInput);
+		
+	}
+
+	private int hashFunction(String strInput) {
+		int sum =0;
+		for(int i=0;i<strInput.length();i++) {
+			sum +=strInput.charAt(i); 
+		}
+		System.out.println(sum);
+		return 0;
+	}
+	
+	
+
+}

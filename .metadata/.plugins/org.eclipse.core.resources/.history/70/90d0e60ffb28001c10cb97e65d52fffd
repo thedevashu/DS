@@ -1,0 +1,19 @@
+package stackusingSLL;
+
+public class Mian {
+
+	public static void main(String[] args) {
+		LL l1=new LL();
+		l1.push(12);
+		l1.push(22);
+		l1.push(32);
+		l1.push(42);
+		System.out.println(l1);
+		l1.insertBack(10);
+		l1.insertBack(20);
+		l1.insertBack(30);
+		l1.insertBack(40);
+		System.out.println(l1);
+	}
+
+}

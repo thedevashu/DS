@@ -1,0 +1,88 @@
+package Practice;
+
+public class LL {
+	Node head;
+
+	public LL(){
+		head =null;
+	}
+	
+	public void insertFront(int data) {
+		Node temp =new Node(data);
+		
+		if(head ==null) {
+			head =temp;
+		}
+		else {
+			temp.setNext(head);
+			head =temp;
+		}
+	}
+	
+	public void insertBack(int data) {
+		Node temp =new Node(data);
+		if(head==null) {
+		head =temp;
+		}
+		else {
+			Node it=new Node();
+			it=head;
+			while(it.getNext() != null) {
+				it = it.getNext();
+			}
+			it.setNext(temp);
+		}
+	}
+	
+	public String toString() {
+		String str="";
+		Node it =head;
+		while(it!=null){
+			str+=it+" ";
+			it=it.getNext();
+		}
+		return str;
+	}
+
+	private int delNextNode(Node temp,int fl) {
+		
+		if(fl == 0) {
+			Node temp2 =head;
+			head = head.getNext();
+			temp2.setNext(null);
+			
+		}else if(fl !=0) {
+		
+		Node oddN =temp.getNext();
+//		Node nNode =oddN.getNext();
+		temp.setNext(oddN.getNext());
+		oddN.setNext(null);
+		}
+		return fl;
+	}
+	public void delOddNode() {
+		Node temp =head;
+		int i =0;
+		int fl =0;
+		while(temp != null) {
+			temp =head;
+			if(i!= noOfNodes()) {
+				delNextNode(temp,i);
+			}
+			i++;
+			temp =temp.getNext();
+		}
+		
+	}
+
+	private int noOfNodes() {
+		int n=0;
+		Node it=head;
+		while(it.getNext() != null) {
+			n++;
+			it=it.getNext();
+		}
+//		System.out.println(n);
+		return n;
+	}
+}

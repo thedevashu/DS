@@ -1,0 +1,14 @@
+package menustack;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LL stack =new Stack();
+		stack.push(2);
+		stack.push(3);
+		stack.push(4);
+		stack.push(6);
+	}
+
+}

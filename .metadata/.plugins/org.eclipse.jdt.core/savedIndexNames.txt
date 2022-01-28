@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\ashutosh yadav\Desktop\cdac\DAC_COURSE_CDAC_IET\DS\.metadata\.plugins\org.eclipse.jdt.core
+819302134.index
+113558702.index
+4026746833.index
